@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <title>Rakshak</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <img src="1695216639085.jpg" alt="logo" class="nav_logo">
+          <h3>Rakshak</h3> 
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+
+                    <li class="nav_item active">
+                        <a href="#" class="nav_link">
+                            <i class="ri-home-8-line nav_icon"></i>
+                            <span class="nav_name">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">
+                            <i class="ri-search-line nav_icon"></i>
+                            <span class="nav_name">Search</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                       <input style="display: none;" type="file" id="img12"/>
+                    <label for="img12">
+                        <div class="nav_link">
+                            <i class="ri-camera-line nav_icon"></i>
+                        <span class="nav_name">Camera</span>
+                        </div>
+                        
+                  </label>
+                       
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">
+                            <i class="ri-history-line nav_icon"></i>
+                            <span class="nav_name">History</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">
+                            <i class="ri-user-line nav_icon"></i>
+                            <span class="nav_name">Profile</span>
+                        </a>
+                    </li>
+                </ul>    
+            </div>  
+            
+            <a href="#" class="chat">
+                <i class="ri-chat-3-line nav_header"></i>
+            <span>Chats</span></a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section class="section content_section">
+
+        <div class="content_container">
+            <div class="img_container">
+                <img src="Res\rough.jpeg" alt="img" class="contImg">
+            </div>
+            <div class="text_container">
+                <h2 class="conText"><span class="user_span">@user: </span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+            </div>
+        </div>
+
+        <div class="content_container">
+            <div class="img_container">
+                <img src="Res\rough.jpeg" alt="img" class="contImg">
+            </div>
+            <div class="text_container">
+                <h2 class="conText"><span class="user_span">@user: </span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+            </div>
+        </div>
+
+        <div class="content_container">
+            <div class="img_container">
+                <img src="Res\rough.jpeg" alt="img" class="contImg">
+            </div>
+            <div class="text_container">
+                <h2 class="conText"><span class="user_span">@user: </span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+            </div>
+        </div>
+
+        <div class="content_container">
+            <div class="img_container">
+                <img src="Res\rough.jpeg" alt="img" class="contImg">
+            </div>
+            <div class="text_container">
+                <h2 class="conText"><span class="user_span">@user: </span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Necessary Scripts -->
+    <script src="homeJS.js"></script>
+    <script>
+        const list = document.querySelectorAll('.nav_item');
+
+function activeLink(){
+    list.forEach((item) => {
+        item.classList.remove('active');
+    });
+    this.classList.add('active');
+}
+
+list.forEach((item) => item.addEventListener('click',activeLink));
+    </script>
+    
+</body>
+</html>
