@@ -48,7 +48,8 @@
         onAuthStateChanged(auth, (user) => {
           if(user) {
            
-            
+            userName.innerHTML = user.displayName;
+            userEmail.innerHTML = user.email
             window.location.href='language.html';
             
             
@@ -56,8 +57,7 @@
             alert("please sign in!!!!")
           }
         })
-        // userName.innerHTML = user.displayName;
-        //     userEmail.innerHTML = user.email
+       
       
         signInButton.addEventListener('click', userSignIn);
         signOutButton.addEventListener('click', userSignOut);
