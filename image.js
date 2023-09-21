@@ -30,6 +30,7 @@ function uploadImage() {
         }, () => {
             uploadTask.snapshot.ref.getDownloadURL().then((url) => {
                 console.log("URL", url);
+                alert("image uploaded")
                 if (url !== "") {
                     document.addEventListener("DOMContentLoaded", function () {
                         // Your code here
