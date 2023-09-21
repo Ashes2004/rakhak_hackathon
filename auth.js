@@ -52,7 +52,7 @@
               
               
                 window.location.href = 'language.html';
-                alert(`welcome ${user.displayName} to the website`);
+                
                 
              
             
@@ -60,7 +60,7 @@
             alert("please sign in!!!!")
           }
 
-          
+          alert(`welcome ${user.displayName} to the website`);
         }
          )
        
