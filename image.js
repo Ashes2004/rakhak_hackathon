@@ -11,7 +11,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var fileitem;
 
+
 const btn = document.querySelector(".btn");
+const img = document.getElementById("img");
 
 
 function getFile(event) {
@@ -19,6 +21,9 @@ function getFile(event) {
     uploadImage(); // Call uploadImage function here
 }
 
+
+ 
+  
 function uploadImage() {
     if (fileitem) {
         let storageRef = firebase.storage().ref("image/" + fileitem.name);
@@ -32,17 +37,21 @@ function uploadImage() {
                 console.log("URL", url);
                 alert("image uploaded")
                 if (url !== "") {
-                    document.addEventListener("DOMContentLoaded", function () {
-                        // Your code here
-                      
-                        // For example:
-                        let img = document.getElementById("uploadedImage");
-                        if (img) {
-                          img.src = url;
-                          img.style.display = "block";
-                        }
-                      });
-                      
+                  
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Your JavaScript code here
+                        const img = document.getElementById('img'); // Define the img variable
+                       
+                            let maindiv = document.createElement('div');
+                            maindiv.classList.add('img1'); // Adding the 'img1' class
+                          
+                            let markups = `
+                              <img src="${url}" alt="uploaded img">`;
+                          
+                            maindiv.innerHTML = markups;
+                            img.appendChild(maindiv); // Append the image to the 'img' element
+                          }
+                    )
                 }
             });
         });
