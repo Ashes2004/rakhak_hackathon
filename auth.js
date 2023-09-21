@@ -45,12 +45,12 @@
               alert("You have signed out successfully!");
           }).catch((error) => {})
         }
-     
+      
         onAuthStateChanged(auth, (user) => {
           if(user) {
              
               
-           
+               alert(`welcome ${user.displayName} to the website`);
                 window.location.href = 'language.html';
                 
                 
