@@ -20,7 +20,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth();
         const provider = new GoogleAuthProvider();
-        let hasRedirected = 0;
+       
       
         const signInButton = document.getElementById("google");
          const signOutButton = document.getElementById("signOutButton");
@@ -45,18 +45,19 @@
               alert("You have signed out successfully!");
           }).catch((error) => {})
         }
-      
+        function updateUserProfile(user) {
+            userName.innerHTML = user.displayName;
+            userEmail.innerHTML = user.email;
+          }
         onAuthStateChanged(auth, (user) => {
           if(user) {
              
-            
-            if (hasRedirected = 0) {
+               updateUserProfile(user);
+           
                 window.location.href = 'language.html';
                 
-                hasRedirected = 1;
-              }
-              userName.innerHTML = user.displayName;
-              userEmail.innerHTML = user.email
+               
+             
             
           } else {
             alert("please sign in!!!!")
