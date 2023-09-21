@@ -184,9 +184,10 @@ button:hover {
         onAuthStateChanged(auth, (user) => {
           if(user) {
            
+            
+            window.location.href='language.html';
             userName.innerHTML = user.displayName;
             userEmail.innerHTML = user.email
-            window.location.href='language.html';
             
           } else {
             alert("please sign in!!!!")
