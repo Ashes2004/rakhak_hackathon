@@ -20,6 +20,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth();
         const provider = new GoogleAuthProvider();
+        let hasRedirected = false;
       
         const signInButton = document.getElementById("google");
          const signOutButton = document.getElementById("signOutButton");
@@ -49,15 +50,19 @@
           if(user) {
              
             
-            window.location.href='language.html';
-           
+            if (!hasRedirected) {
+                window.location.href = 'language.html';
+                
+                hasRedirected = true;
+              }
+              userName.innerHTML = user.displayName;
+              userEmail.innerHTML = user.email
             
           } else {
             alert("please sign in!!!!")
           }
 
-          userName.innerHTML = user.displayName;
-          userEmail.innerHTML = user.email
+          
         })
        
       
