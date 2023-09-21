@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
+    <script src="auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-storage.js"></script>
    
     <title>Rakshak</title>
 </head>
@@ -34,8 +36,10 @@
                     </li>
 
                     <li class="nav_item">
-                       <input style="display: none;" type="file" id="img12"/>
-                    <label for="img12">
+                        <input style="display: none;" type="file" class="fileinput" id="file" onchange="getFile(event)"
+                        accept="image/png,image/jpeg"/>
+                        <button style="display: none;" class="btn">upload</button>
+                    <label for="file">
                         <div class="nav_link">
                             <i class="ri-camera-line nav_icon"></i>
                         <span class="nav_name">Camera</span>
@@ -122,6 +126,12 @@ function activeLink(){
 
 list.forEach((item) => item.addEventListener('click',activeLink));
     </script>
-   
+   >
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-storage.js"></script>
+<script src="image.js">
+ 
+</script>
+
 </body>
 </html>
