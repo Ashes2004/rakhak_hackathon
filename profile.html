@@ -127,6 +127,16 @@ button:hover {
     width:80px ;
     text-align: center;
 }
+.login-container{
+    border-radius: 15px;
+    background-color: #00ff37;
+    opacity: 0.75;
+    box-shadow: 8px 8px 8px rgb(170, 170, 133);
+    padding: 10px 10px 10px 10px;
+}
+.login-container span{
+    color: rgb(61, 61, 201);
+}
 
 </style>
 <body>
@@ -135,43 +145,13 @@ button:hover {
         <img src="1695216639085.jpg">
     </div>
     <div class="login-container">
-       <h2>Choose Your Language</h2>
        
-     <div class="drop">
-       
-        <select id="language" name="language" required>
-            <option value="home.html"><a href="home.html">English</a></option>
-            <option value="Hindi">हिंदी</option>
-            <option value="bengali">বাংলা</option>
-            
-        </select>
+        <h3>welcome <span id="userName">ashes</span><span></span> to our website</h3>
         <br>
-        <button class="btn btn-lg btn-primary bn" onclick="redirectToSelectedPage()"> <h3>Go</h3> </button>
-     </div>
-      
+        <h2>Your email: <span id="userEmail">dasashes@gmail.com</span></h2>
+        <br>
+         <button id="signOutButton" class="btn btn-lg btn-primary">SIGN OUT</button>
     </div>
-    <script>
-        function redirectToSelectedPage() {
-            const selectedLanguage = document.getElementById("language").value;
-            let pageUrl;
-
-            // Define the URLs for each language
-            switch (selectedLanguage) {
-                case "english":
-                    pageUrl = "home.html";
-                    break;
-                case "hindi":
-                    pageUrl = "#";
-                    break;
-                case "bengali":
-                    pageUrl = "#";
-                    break;
-                default:
-                    // Default to English if language not recognized
-                    pageUrl = "home.html";
-            }
-            window.location.href = pageUrl;
-        }
-    </script>
+   
 </body>
 </html>
