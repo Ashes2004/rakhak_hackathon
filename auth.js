@@ -61,12 +61,8 @@
           }
 
           
-        },
-        (user)=> {
-            userName.innerHTML = user.displayName;
-            userEmail.innerHTML = user.email;
-          }
-   )
+        }
+         )
        
       
         signInButton.addEventListener('click', userSignIn);
