@@ -47,15 +47,17 @@
       
         onAuthStateChanged(auth, (user) => {
           if(user) {
-           
-            userName.innerHTML = user.displayName;
-            userEmail.innerHTML = user.email
-            window.location.href='language.html';
+             
             
+            window.location.href='language.html';
+           
             
           } else {
             alert("please sign in!!!!")
           }
+
+          userName.innerHTML = user.displayName;
+          userEmail.innerHTML = user.email
         })
        
       
