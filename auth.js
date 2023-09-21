@@ -45,10 +45,7 @@
               alert("You have signed out successfully!");
           }).catch((error) => {})
         }
-        function updateUserProfile(user) {
-            userName.innerHTML = user.displayName;
-            userEmail.innerHTML = user.email;
-          }
+     
         onAuthStateChanged(auth, (user) => {
           if(user) {
              
@@ -56,7 +53,7 @@
            
                 window.location.href = 'language.html';
                 
-                updateUserProfile(user);
+                
              
             
           } else {
@@ -64,7 +61,12 @@
           }
 
           
-        })
+        },
+        (user)=> {
+            userName.innerHTML = user.displayName;
+            userEmail.innerHTML = user.email;
+          }
+   )
        
       
         signInButton.addEventListener('click', userSignIn);
