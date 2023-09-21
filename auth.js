@@ -60,9 +60,11 @@
             alert("please sign in!!!!")
           }
 
-          alert(`welcome ${user.displayName} to the website`);
+          
         }
          )
+
+         
        
       
         signInButton.addEventListener('click', userSignIn);
