@@ -50,13 +50,14 @@
            
             
             window.location.href='language.html';
-            userName.innerHTML = user.displayName;
-            userEmail.innerHTML = user.email
+            
             
           } else {
             alert("please sign in!!!!")
           }
         })
+        userName.innerHTML = user.displayName;
+            userEmail.innerHTML = user.email
       
         signInButton.addEventListener('click', userSignIn);
         signOutButton.addEventListener('click', userSignOut);
