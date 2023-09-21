@@ -50,9 +50,9 @@
           if(user) {
              
               
-               alert(`welcome ${user.displayName} to the website`);
+              
                 window.location.href = 'language.html';
-                
+                alert(`welcome ${user.displayName} to the website`);
                 
              
             
