@@ -52,11 +52,11 @@
         onAuthStateChanged(auth, (user) => {
           if(user) {
              
-               updateUserProfile(user);
+              
            
                 window.location.href = 'language.html';
                 
-               
+                updateUserProfile(user);
              
             
           } else {
