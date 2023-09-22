@@ -4,7 +4,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
         import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
         // Add your own Firebase config here
-       export 
+       
       
         const firebaseConfig = {
           apiKey: "AIzaSyAdyvZiS8toiDDAv_EeyuByXMTwbZH92OA",
@@ -40,10 +40,10 @@
               const errorMessage = error.message
           })
         }
-        export const myObject = {
-            name: user.displayName,
-            email:user.email
-          };
+        // export const myObject = {
+        //     name: user.displayName,
+        //     email:user.email
+        //   };
       
         const userSignOut = async() => {
           signOut(auth).then(() => {
