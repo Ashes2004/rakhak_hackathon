@@ -1,32 +1,43 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Firebase Storage Example</title>
-    <!-- Include Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-    <script src="image.js"></script>
-    <style>
-        /* Add CSS styling if needed */
-        #imageElement{
-            
-            height: 200px;
-            width: 200px;
-            object-fit: cover;
-            
-            border: 4px solid green;
-            border-radius: 4px;
-        
-        }
-    </style>
+    <title>Display Image</title>
 </head>
 <body>
-    <h1>Retrieve Image from Firebase Storage</h1>
-    <!-- Create an image element to display the image -->
-    <img id="imageElement" src="" alt="Firebase Image">
+    <h1>Image from Database</h1>
+    <img src="" alt="Image from Database" id="imageElement">
     
-   
+    <script>
+        // Initialize Firebase (make sure Firebase is initialized)
+        const firebaseConfig = {
+    apiKey: "AIzaSyAdyvZiS8toiDDAv_EeyuByXMTwbZH92OA",
+    authDomain: "newtest-74b01.firebaseapp.com",
+    projectId: "newtest-74b01",
+    storageBucket: "newtest-74b01.appspot.com",
+    messagingSenderId: "276032892899",
+    appId: "1:276032892899:web:59e3fe004f8c1b4733fad6",
+    measurementId: "G-BDZ6541XHM"
+  };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the Realtime Database
+        var database = firebase.database();
+
+        // Reference to the image element
+        var imageElement = document.getElementById('imageElement');
+
+        // Retrieve the image URL from the database
+        database.ref('images').once('value').then(function(snapshot) {
+            var data = snapshot.val();
+            if (data) {
+                // Assuming you have only one image URL, you can access it like this
+                var imageURL = Object.values(data)[0].url;
+                
+                // Set the image element's src attribute to the fetched URL
+                imageElement.src = imageURL;
+            }
+        });
+    </script>
 </body>
 </html>

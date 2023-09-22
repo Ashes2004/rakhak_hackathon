@@ -13,6 +13,7 @@ var fileitem;
 
 
 const btn = document.querySelector(".btn");
+var database = firebase.database();
 
 
 
@@ -35,13 +36,16 @@ function uploadImage() {
         }, () => {
             uploadTask.snapshot.ref.getDownloadURL().then((url) => {
                 console.log("URL", url);
-                alert("image uploaded")
+                alert("image uploaded");
+              
+                
+                database.ref('images').push({
+                    url: url,
+                    name:user.displayName,
+                    email:user.email
+                });
 
-
-                if (url !== "") {
-                  
-                    document.getElementById('imageElement').src = url;
-                }
+                
             });
         });
     } 
@@ -57,3 +61,7 @@ document.getElementsByClassName('btn').addEventListener('click', function () {
 btn.addEventListener('click', getFile);
  // Attach getFi
 
+
+
+        // Get a reference to the image element
+        
