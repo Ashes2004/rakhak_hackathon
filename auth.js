@@ -40,10 +40,10 @@
               const errorMessage = error.message
           })
         }
-        // export const myObject = {
-        //     name: user.displayName,
-        //     email:user.email
-        //   };
+        export const myObject = {
+            name: user.displayName,
+            email:user.email
+          };
       
         const userSignOut = async() => {
           signOut(auth).then(() => {
