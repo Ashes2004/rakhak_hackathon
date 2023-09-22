@@ -1,4 +1,4 @@
-import { user } from './auth.js';
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyAdyvZiS8toiDDAv_EeyuByXMTwbZH92OA",
@@ -12,12 +12,13 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 var fileitem;
+var username = userSignIn.user;
 
 
 const btn = document.querySelector(".btn");
 var database = firebase.database();
 
-
+var username = userSignIn.user;
 
 function getFile(event) {
     fileitem = event.target.files[0];
@@ -43,7 +44,8 @@ function uploadImage() {
                 
                 database.ref('images').push({
                     url: url,
-                  name:user.displayName,
+                    username: username,
+                  
                     // email:user.email
                 });
 
