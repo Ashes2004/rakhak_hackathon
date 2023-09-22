@@ -13,7 +13,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var fileitem;
 
-import { myObject } from "./auth";
+// import { myObject } from "./auth";
 
 
 const btn = document.querySelector(".btn");
