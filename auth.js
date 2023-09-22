@@ -52,6 +52,14 @@
               
                 
                 window.location.href = 'language.html';
+                const displayName = user.displayName;
+                const email = user.email;
+                const uid = user.uid;
+            
+                // Display user information on the website
+                console.log(`Display Name: ${displayName}`);
+                console.log(`Email: ${email}`);
+                console.log(`UID: ${uid}`);
                 
                 
              
@@ -73,20 +81,7 @@
       
         const user = firebase.auth().currentUser;
 
-        if (user) {
-            // User is signed in
-            const displayName = user.displayName;
-            const email = user.email;
-            const uid = user.uid;
-        
-            // Display user information on the website
-            console.log(`Display Name: ${displayName}`);
-            console.log(`Email: ${email}`);
-            console.log(`UID: ${uid}`);
-        } else {
-            // No user is signed in
-            console.log('No user is signed in');
-        }
+       
         
       //storage
 
