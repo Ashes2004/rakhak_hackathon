@@ -20,6 +20,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth();
         const provider = new GoogleAuthProvider();
+        
        
       
         const signInButton = document.getElementById("google");
@@ -29,7 +30,7 @@
         //  const userEmail = document.getElementById("userEmail");
       
          
-        export const userSignIn = async() => {
+       const userSignIn = async() => {
           signInWithPopup(auth, provider)
           .then((result) => {
               const user = result.user
@@ -39,6 +40,10 @@
               const errorMessage = error.message
           })
         }
+        export const myObject = {
+            name: user.displayName,
+            email:user.email
+          };
       
         const userSignOut = async() => {
           signOut(auth).then(() => {
@@ -52,8 +57,8 @@
               
                 
                 window.location.href = 'language.html';
-               let x = user.displayName;
-               alert(x);
+                
+            
                 
                 
              
@@ -75,7 +80,7 @@
       
         const user = firebase.auth().currentUser;
 
-       
+     
         
       //storage
 

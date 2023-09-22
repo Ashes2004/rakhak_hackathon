@@ -13,6 +13,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var fileitem;
 
+import { myObject } from "./auth";
 
 
 const btn = document.querySelector(".btn");
@@ -44,7 +45,8 @@ function uploadImage() {
                 
                 database.ref('images').push({
                     url: url,
-                    name:user.displayName
+                    myObject
+                   
                   
                     // email:user.email
                 });
