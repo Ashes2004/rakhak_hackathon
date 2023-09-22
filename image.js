@@ -18,7 +18,7 @@ var fileitem;
 const btn = document.querySelector(".btn");
 var database = firebase.database();
 
-var username = userSignIn.user.displayName;
+
 
 function getFile(event) {
     fileitem = event.target.files[0];
@@ -44,7 +44,7 @@ function uploadImage() {
                 
                 database.ref('images').push({
                     url: url,
-                    name:"ashes"
+                    name:user.displayName
                   
                     // email:user.email
                 });
