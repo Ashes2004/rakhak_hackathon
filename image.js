@@ -18,7 +18,7 @@ var username = userSignIn.user;
 const btn = document.querySelector(".btn");
 var database = firebase.database();
 
-var username = userSignIn.user;
+var username = userSignIn.user.displayName;
 
 function getFile(event) {
     fileitem = event.target.files[0];
