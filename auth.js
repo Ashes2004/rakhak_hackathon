@@ -24,9 +24,9 @@
       
         const signInButton = document.getElementById("google");
          const signOutButton = document.getElementById("signOutButton");
-        const message = document.getElementById("message");
-         const userName = document.getElementById("userName");
-         const userEmail = document.getElementById("userEmail");
+        // const message = document.getElementById("message");
+        //  const userName = document.getElementById("userName");
+        //  const userEmail = document.getElementById("userEmail");
       
          
         const userSignIn = async() => {
@@ -50,7 +50,7 @@
           if(user) {
              
               
-              
+                
                 window.location.href = 'language.html';
                 
                 
@@ -71,7 +71,23 @@
         signOutButton.addEventListener('click', userSignOut);
       
       
-      
+        const user = firebase.auth().currentUser;
+
+        if (user) {
+            // User is signed in
+            const displayName = user.displayName;
+            const email = user.email;
+            const uid = user.uid;
+        
+            // Display user information on the website
+            console.log(`Display Name: ${displayName}`);
+            console.log(`Email: ${email}`);
+            console.log(`UID: ${uid}`);
+        } else {
+            // No user is signed in
+            console.log('No user is signed in');
+        }
+        
       //storage
 
       

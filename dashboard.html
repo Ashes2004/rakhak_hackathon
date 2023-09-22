@@ -1,27 +1,32 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Firebase Storage Example</title>
+    <!-- Include Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="image.js"></script>
     <style>
-        .img{
+        /* Add CSS styling if needed */
+        #imageElement{
+            
             height: 200px;
             width: 200px;
             object-fit: cover;
-            display: none;
+            
             border: 4px solid green;
             border-radius: 4px;
+        
         }
     </style>
 </head>
 <body>
-   
-    <div id="img"></div>
-   
+    <h1>Retrieve Image from Firebase Storage</h1>
+    <!-- Create an image element to display the image -->
+    <img id="imageElement" src="" alt="Firebase Image">
     
-        
-    
+   
 </body>
 </html>

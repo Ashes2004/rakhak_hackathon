@@ -13,7 +13,7 @@ var fileitem;
 
 
 const btn = document.querySelector(".btn");
-const img = document.getElementById("img");
+
 
 
 function getFile(event) {
@@ -36,22 +36,11 @@ function uploadImage() {
             uploadTask.snapshot.ref.getDownloadURL().then((url) => {
                 console.log("URL", url);
                 alert("image uploaded")
+
+
                 if (url !== "") {
                   
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Your JavaScript code here
-                        const img = document.getElementById('img'); // Define the img variable
-                       
-                            let maindiv = document.createElement('div');
-                            maindiv.classList.add('img1'); // Adding the 'img1' class
-                          
-                            let markups = `
-                              <img src="${url}" alt="uploaded img">`;
-                          
-                            maindiv.innerHTML = markups;
-                            img.appendChild(maindiv); // Append the image to the 'img' element
-                          }
-                    )
+                    document.getElementById('imageElement').src = url;
                 }
             });
         });
