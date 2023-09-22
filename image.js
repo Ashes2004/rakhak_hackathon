@@ -1,3 +1,5 @@
+import { user } from './auth.js';
+
 const firebaseConfig = {
     apiKey: "AIzaSyAdyvZiS8toiDDAv_EeyuByXMTwbZH92OA",
     authDomain: "newtest-74b01.firebaseapp.com",

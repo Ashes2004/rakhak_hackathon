@@ -52,14 +52,7 @@
               
                 
                 window.location.href = 'language.html';
-                const displayName = user.displayName;
-                const email = user.email;
-                const uid = user.uid;
-            
-                // Display user information on the website
-                console.log(`Display Name: ${displayName}`);
-                console.log(`Email: ${email}`);
-                console.log(`UID: ${uid}`);
+               
                 
                 
              
