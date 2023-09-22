@@ -40,9 +40,9 @@ function uploadImage() {
               
                 
                 database.ref('images').push({
-                    url: url,
-                    name:user.displayName,
-                    email:user.email
+                    url: url
+                    // name:user.displayName,
+                    // email:user.email
                 });
 
                 
