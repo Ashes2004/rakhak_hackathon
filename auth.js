@@ -4,7 +4,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
         import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
         // Add your own Firebase config here
-       
+       export 
       
         const firebaseConfig = {
           apiKey: "AIzaSyAdyvZiS8toiDDAv_EeyuByXMTwbZH92OA",
@@ -29,7 +29,7 @@
         //  const userEmail = document.getElementById("userEmail");
       
          
-        const userSignIn = async() => {
+        export const userSignIn = async() => {
           signInWithPopup(auth, provider)
           .then((result) => {
               const user = result.user
@@ -52,7 +52,8 @@
               
                 
                 window.location.href = 'language.html';
-               
+               let x = user.displayName;
+               alert(x);
                 
                 
              
