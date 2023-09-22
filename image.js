@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 var fileitem;
-var username = userSignIn.user;
+
 
 
 const btn = document.querySelector(".btn");
@@ -44,7 +44,7 @@ function uploadImage() {
                 
                 database.ref('images').push({
                     url: url,
-                    username: username,
+                    name:"ashes"
                   
                     // email:user.email
                 });
