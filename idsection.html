@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script type="module" src="auth.js"></script>
+   
 </head>
 <style>
 
@@ -123,17 +123,16 @@ button:hover {
         <img src="1695216639085.jpg">
     </div>
     <div class="login-container">
-        <form action="login.php" method="POST"> <!-- Replace 'login.php' with your server-side script -->
+        <form > <!-- Replace 'login.php' with your server-side script -->
             <div class="input-container">
                 <label for="mobileNumber">Mobile Number:</label>
                 <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" required>
             </div>
-            <button type="submit" >Login</button>
+           <button type="button" onclick="window.location.href='language.html';">Login</button>
+
         </form>
         <br>
-        <h3>or,</h3>
-        <br>
-        <button type="button" id="google" class="btn btn-primary btn-lg ">Sign in with <i class="fa-brands fa-google"></i>oogle</button>
+        
      <script src="idsection.js"></script>
     </div>
     
